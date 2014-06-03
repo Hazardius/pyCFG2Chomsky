@@ -1,0 +1,9 @@
+*S -> *U
+*S -> *V
+*U -> *T a *U
+*U -> *T a *T
+*V -> *T b *V
+*V -> *T b *T
+*T -> a *T b *T
+*T -> b *T a *T
+*T -> ε
