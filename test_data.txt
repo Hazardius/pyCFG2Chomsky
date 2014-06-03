@@ -1,0 +1,4 @@
+*S->a *A b
+*S->a b
+*A->*S
+*A->a a *S c
