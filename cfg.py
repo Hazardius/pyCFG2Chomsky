@@ -5,8 +5,6 @@
 
 import sys
 
-from additional import sort_and_deduplicate as sdedup
-
 class ContextFreeGrammar(object):
 
     def __init__(self, file_of_rules):
@@ -64,7 +62,8 @@ class ContextFreeGrammar(object):
         to_del = [rule for rule in self.rules if rule[1] == ["ε"]]
         for rule in to_del:
             self.rules.remove(rule)
-        self.terminals.remove("ε")
+        if ("ε" in self.terminals):
+            self.terminals.remove("ε")
 
     def _transform_terminals_(self):
         for term in self.terminals:
